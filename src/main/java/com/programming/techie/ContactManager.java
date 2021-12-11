@@ -14,6 +14,11 @@ public class ContactManager {
         checkIfContactAlreadyExist(contact);
         contactList.put(generateKey(contact), contact);
     }
+    public void addContact(Contact contact) {
+        validateContact(contact);
+        checkIfContactAlreadyExist(contact);
+        contactList.put(generateKey(contact), contact);
+    }
 
     public Collection<Contact> getAllContacts() {
         return contactList.values();
